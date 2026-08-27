@@ -1,0 +1,105 @@
+#include<stdio.h>
+int main()
+{
+	int num, choice;
+	int i,rem,rev,sum;
+	
+	printf("Enter a number:");
+	scanf("%d",&num);
+	
+	printf("\n_____MENU____\n");
+	printf("1.check Even or odd\n");
+	printf("2.check prime or Not\n");
+	printf("3.check palindrome or Not\n");
+	printf("4. reverse a number\n");
+	printf("6. Find sum of degits\n");
+	
+	printf("\nEnter your choice:");
+	scanf("%d",&choice);
+	
+	switch(choice)
+	{
+		case 1:
+			if(num%2==0)
+			printf("Number is Even");
+			else
+			printf("Number is odd");
+			break;
+			
+			case 2:
+			if(num<=1)
+			{
+				printf("Number is NOt prime");
+				
+			}
+			else
+			{
+				int isprime =1;
+				for(i=2; i<num/2;i++)
+				{
+					if (num%i ==0)
+					{
+						isprime =0;
+						break;
+					}
+				}
+				if(isprime)
+				printf("Number is prime");
+				else
+				printf("Number is not prime");
+				}
+				break;
+				case 3:
+					rev =0;
+					int original =num;
+					
+					while(num !=0)
+					{
+						rem =num%10;
+						rev=rev*10+rem;
+						num=num/10;
+					}
+					if(original==rev)
+					printf("Number is palindrome");
+					else
+					printf("Number is not palindrome");
+					break;
+					
+					case 4:
+						if(num>0)
+						printf("Number is positive");
+						else if(num<0)
+						printf("Number is negative");
+						else
+						printf("Number is zero");
+						break;
+						
+						case 5:
+							rev=0;
+							while(num!=0)
+							{
+								rem=num%10;
+								rev=rev*10+rem;
+								num=num/10;
+							}
+							printf("Reverse=%d",rev);
+							break;
+							
+							case 6:
+								sum=0;
+								while(num!=0)
+								{
+									rem=num%10;
+									sum=sum+rem;
+									num=num/10;
+								}
+					printf("sum of digit=%d",sum);
+					break;
+					default:
+					printf("Invalid choice");
+									
+						
+	
+			}
+			return 0;
+	}
