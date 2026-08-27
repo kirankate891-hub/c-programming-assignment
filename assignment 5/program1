@@ -1,0 +1,17 @@
+ #include<stdio.h>
+int main()
+ {
+ 	int n,i,j;
+ 	int num=4;
+ 	
+ 	for(i=1;i<=4;i++)
+ 	{
+ 		for(j=1;j<=4;j++)
+ 		{
+ 			printf("* ");
+		 }
+		 printf("\n");
+	 }
+	 return 0;
+ 	
+ }
