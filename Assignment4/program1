@@ -1,0 +1,73 @@
+#include<stdio.h>
+
+//1. no argument + NO return value
+void evenodd1()
+{
+	int n;
+	printf("Enter number:");
+	scanf("%d",&n);
+	
+	if(n % 2==0)
+	printf("Even\n");
+	else
+	printf("odd\n");
+	
+}
+// 2.Argument + NO return value
+void evenodd2(int n)
+{
+	if(n % 2 == 0)
+	printf("Even\n");
+	else
+	printf("odd\n");
+	
+}
+// 3. No argument+ return value
+int evenodd3()
+{
+	int n;
+	printf("Enter number:");
+	scanf("d",&n);
+	
+	return n% 2==0;
+	}
+	
+//4.argument + return value
+int evenodd(int n)
+{
+	return n%2 == 0;
+	}
+	int main()
+	{
+		int n, result;
+		
+		printf("\n---1. NO argument + No return ---\n");
+		evenodd1();
+		
+		printf("\n---2.argument + NO return ---\n");
+		printf("Enter number:");
+		scanf("%d",&n);
+		evenodd2(n);
+		
+		printf("\n---3. NO argument + return ---\n");
+		result = evenodd3();
+		
+		if(result)
+		printf("Even\n");
+		else
+		printf("odd\n");
+		
+		printf("\n--- 4.argument+return ---\n");
+		printf("Enter number:");
+		scanf("%d",&n);
+		
+		result=evenodd(n);
+		
+		if(result)
+		printf("Even\n");
+		else
+		printf("odd\n");
+		
+		return 0;
+		}	
+	
